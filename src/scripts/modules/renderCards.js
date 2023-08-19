@@ -21,7 +21,7 @@ export const renderCards = () => {
                     <button class="button"><img src="./images/heart.svg" alt=""></button>
                 </div>
             </div>
-            <img class="card__img" src="images/dbimage/${data.photo}.jpg" alt="Фото двери ${data.title}">
+            <img class="card__img" src="./images/${data.photo}.jpg" alt="Фото двери ${data.title}">
             <div class="card__body">
                 <p class="card__stock text text--medium">${data.stock ? 'В наличии' : 'Нет в наличии'}
                     <span class="card__code">Арт.: ${data.code}</span>
