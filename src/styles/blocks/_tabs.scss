@@ -1,0 +1,173 @@
+.tabs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+
+  background-color: $color-system--white;
+  box-shadow: 0px 0px 0px 1px #E4E4E7 inset;
+
+  @include media-desktop--medium {
+    display: none;
+  }
+}
+
+.tabs-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.688rem 0;
+
+  box-shadow: 0px -4px 30px 0px rgba(0, 0, 0, 0.10);
+}
+
+.tabs-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 1rem;
+
+  font-size: 0.75rem;
+
+  transition: color .4s ease;
+  cursor: pointer;
+
+  &:nth-child(1),
+  &:nth-child(3) {
+    .tabs-nav__icon {
+      stroke: $color-icon--secondary;
+      transition: stroke .4s ease;
+    }
+  }
+
+  &--active,
+  &:hover {
+    color: $color-state--normal;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      .tabs-nav__icon {
+        stroke: currentColor;
+      }
+    }
+
+    .tabs-nav__icon {
+      fill: currentColor;
+    }
+
+    .tabs-nav__custom-icon {
+
+      & span,
+      &::before,
+      &::after {
+        background-color: $color-state--normal;
+      }
+    }
+  }
+
+  &--active {
+    .tabs-nav__custom-icon {
+      span {
+        transition: transform .25s .25s;
+        transform: scale(0);
+      }
+
+      &::before,
+      &::after {
+        top: 50%;
+        transition: top .4s, transform .25s .25s;
+      }
+
+      &::before {
+        transform: rotateZ(-45deg);
+      }
+
+      &::after {
+        transform: rotateZ(45deg);
+      }
+    }
+  }
+}
+
+.tabs-nav__icon {
+  fill: $color-icon--secondary;
+  transition: fill .4s ease;
+}
+
+.tabs-content {
+  height: 0;
+  
+  background: $color-system--white;
+  transition: all .4s ease;
+
+  opacity: 0;
+  visibility: hidden;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.tabs-content__item {
+  display: none;
+
+  visibility: hidden;
+  opacity: 0;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    visibility: visible;
+    opacity: 1;
+    overflow-y: auto;
+  }
+}
+
+.tabs-nav__custom-icon {
+  position: relative;
+
+  width: 1.5rem;
+  height: 1rem;
+
+  margin-bottom: 0.5rem;
+
+  transition-duration: 1s;
+
+  span,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+
+    height: 0.13rem;
+    width: 100%;
+
+    background-color: $color-icon--secondary;
+    border-radius: 0.25rem;
+
+    transition-duration: .25s;
+    transition: background-color .4s, transform .25s, top .25s .25s;
+  }
+
+  span {
+    top: 50%;
+  }
+
+  &::before {
+    content: "";
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    top: 100%;
+  }
+}

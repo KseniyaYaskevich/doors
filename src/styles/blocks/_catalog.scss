@@ -1,0 +1,38 @@
+.catalog {
+  display: none;
+  align-items: center;
+  gap: 2.5rem;
+
+  @include media-desktop--medium {
+    display: flex;
+
+    padding-right: 1rem;
+    padding-left: 3.125rem;
+  }
+}
+
+.catalog__icon {
+  stroke: $color-state--normal;
+}
+
+.catalog__button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  cursor: pointer;
+
+  & img {
+    margin-right: 0.75rem;
+  }
+}
+
+.catalog__text {
+  display: none;
+
+  @include media-desktop--large {
+    display: block;
+
+    font-size: 0.813rem;
+  }
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doors</title>
+  <script src="./js/main.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="page-body">
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__logo logo">
+        <a class="logo__link" href="index.html">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logo/logo-desktop.svg">
+            <img class="logo__img" src="./images/logo/logo-mobile.svg" alt="Логотип компании 'Фабрика дверей'">
+          </picture>
+        </a>
+        <span class="logo__desc caption caption--regular">Интернет-магазин дверей<br> в Нижнем
+          Новгороде</span>
+      </div>
+      <div class="header__search search">
+        <div class="search__container">
+          <svg class="search__icon" width="24" height="24">
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          <input class="search__input text text--regular" type="search" name="search" placeholder="Поиск"
+            aria-label="Поиск дверей по сайту">
+          <button class="button search__button" type="submit" aria-label="Начать поиск">
+            <span class="search__arrow"><span></span></span>
+          </button>
+        </div>
+      </div>
+      <div class="header__address address">
+        <svg class="address__icon" width="24" height="24">
+          <use xlink:href="images/sprite.svg#pin"></use>
+        </svg>
+        <p class="address__text text text--regular">Нижний Новгород, ул. Уличная, 1, оф. 15</p>
+      </div>
+      <div class="header__contacts contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a class="contacts__link" href="#!">
+              <img src="./images/contacts/telegram.svg" alt="telegram">
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="#!">
+              <img src="./images/contacts/whatsapp.svg" alt="whatsapp">
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link title title--medium" href="tel:88312199781">8 (831) 219-97-81</a>
+          </li>
+        </ul>
+        <button class="button contacts__button text text--medium request-call">Заказать звонок</button>
+      </div>
+      <div class="header__catalog catalog">
+        <button class="button  catalog__button caps caps--medium">
+          <svg class="catalog__icon" width="24" height="24">
+            <use xlink:href="images/sprite.svg#catalog"></use>
+          </svg>
+          Каталог
+        </button>
+        <span class="catalog__text caption caption--regular">Более 3000 товаров</span>
+      </div>
+      <nav class="header__main-nav main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link caps caps--medium" href="#!">Акции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link caps caps--medium" href="#!">Доставка и Установка</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link caps caps--medium" href="#!">Оплата</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link caps caps--medium" href="#!">Сертификаты</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link caps caps--medium" href="#!">О нас</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link caps caps--medium" href="#!">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__categories categories">
+        <div class="categories-nav">
+          <button class="button categories-nav__item">
+            <svg class="categories-nav__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-1-inside-1_125_1048" fill="white">
+                <rect x="3" y="9" width="7" height="12" rx="1" />
+              </mask>
+              <rect x="3" y="9" width="7" height="12" rx="1" stroke="#222427" stroke-width="4"
+                mask="url(#path-1-inside-1_125_1048)" />
+              <mask id="path-2-inside-2_125_1048" fill="white">
+                <rect x="14" y="2" width="7" height="19" rx="1" />
+              </mask>
+              <rect x="14" y="2" width="7" height="19" rx="1" stroke="#222427" stroke-width="4"
+                mask="url(#path-2-inside-2_125_1048)" />
+            </svg>
+            <span class="categories-nav__counter">3</span>
+          </button>
+          <button class="button categories-nav__item">
+            <svg class="categories-nav__icon" width="24" height="24">
+              <use xlink:href="images/sprite.svg#heart"></use>
+            </svg>
+          </button>
+          <button class="button categories-nav__item">
+            <svg class="categories-nav__icon" width="24" height="24">
+              <use xlink:href="images/sprite.svg#card"></use>
+            </svg>
+            <span class="categories-nav__counter" id="cart-counter">0</span>
+          </button>
+          <button class="button categories-nav__item">
+            <svg class="categories-nav__icon" width="24" height="24">
+              <use xlink:href="images/sprite.svg#user"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="categories-content">
+          <div class="categories-content__item">
+            <h3>Сравнение</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="categories-content__item">
+            <h3>Понравилось</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="categories-content__item cart">
+            <ul class="cart__list">
+              <!-- cart__items -->
+            </ul>
+            <div class="cart__result">
+              <p class="cart__sum title title--medium">Сумма заказа: 0 ₽</p>
+              <button class="button cart__button" type="button">Перейти к оформлению →</button>
+            </div>
+          </div>
+          <div class="categories-content__item">
+            <h3>Пользователь</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="header__tabs tabs">
+        <div class="tabs-content">
+          <div class="tabs-content__item">
+            <h3>Каталог</h3>
+          </div>
+          <div class="tabs-content__item">
+            <h3>Поиск</h3>
+          </div>
+          <div class="tabs-content__item">
+            <h3>Корзина</h3>
+          </div>
+          <div class="tabs-content__item">
+            <h3>Акции</h3>
+          </div>
+          <div class="tabs-content__item mobile-menu">
+            <div class="mobile-menu__adress address">
+              <svg class="address__icon" width="24" height="24">
+                <use xlink:href="images/sprite.svg#pin"></use>
+              </svg>
+              <p class="address__text text text--regular">Нижний Новгород, ул. Уличная, 1, оф. 15</p>
+            </div>
+            <div class="mobile-menu__inner">
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link caps caps--medium" href="#!">Установка и Доставка</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link caps caps--medium" href="#!">Оплата</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link caps caps--medium" href="#!">Сертификаты</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link caps caps--medium" href="#!">О нас</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a class="mobile-menu__link caps caps--medium" href="#!">Контакты</a>
+                </li>
+              </ul>
+              <button class="button mobile-menu__button text text--medium request-call">Заказать звонок</button>
+            </div>
+            <ul class="mobile-menu__categories mobile-categories">
+              <button class="button mobile-categories__button">
+                <img src="./images/compare-menu.svg" alt="">
+              </button>
+              <button class="button mobile-categories__button">
+                <svg class="" width="24" height="24">
+                  <use xlink:href="images/sprite.svg#heart"></use>
+                </svg>
+              </button>
+              <button class="button mobile-categories__button">
+                <svg class="" width="24" height="24">
+                  <use xlink:href="images/sprite.svg#user"></use>
+                </svg>
+              </button>
+            </ul>
+          </div>
+        </div>
+        <div class="tabs-nav">
+          <button class="button tabs-nav__item caption caption--regular">
+            <svg class="tabs-nav__icon" width="24" height="24">
+              <use xlink:href="images/sprite.svg#catalog"></use>
+            </svg>
+            Каталог
+          </button>
+          <button class="button tabs-nav__item caption caption--regular">
+            <svg class="tabs-nav__icon" width="24" height="24">
+              <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            Поиск
+          </button>
+          <button class="button tabs-nav__item caption caption--regular">
+            <svg class="tabs-nav__icon" width="24" height="24">
+              <use xlink:href="images/sprite.svg#card"></use>
+            </svg>
+            Корзина
+          </button>
+          <button class="button tabs-nav__item caption caption--regular">
+            <svg class="tabs-nav__icon" width="24" height="24">
+              <use xlink:href="images/sprite.svg#sale"></use>
+            </svg>
+            Акции
+          </button>
+          <button class="button tabs-nav__item caption caption--regular">
+            <span class="tabs-nav__custom-icon">
+              <span></span>
+            </span>
+            Меню
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Главная страница</h1>
+      <section class="cards">
+        <h2 class="visually-hidden">Карточки</h2>
+        <ul class="cards__list">
+          <!-- cards__items -->
+        </ul>
+      </section>
+    </main>
+    <div class="popup popup-call">
+      <div class="popup-dialog">
+        <h3 class="popup__title title title--medium">Заполните данные и мы свяжемся с вами в рабочее время и ответим на
+          все
+          интересующие вопросы</h3>
+        <form class="popup__form form">
+          <p class="form__control">
+            <input class="form__input" type="text" id="user-name" name="name" placeholder="Имя*" required>
+          </p>
+          <p class="form__control">
+            <input class="form__input" type="tel" id="user-phone" name="phone" placeholder="Телефон*" required>
+          </p>
+          <p class="form__checkbox-control">
+            <input class="form__checkbox-input" type="checkbox" name="checkbox" id="checkbox" checked required>
+            <label class="form__checkbox-label" for="checkbox">Даю свое согласие на обработку
+              персональных данных</label>
+          </p>
+          <button class="button form__button" type="submit">Заказать звонок</button>
+        </form>
+        <button class="button popup__close" type="button" aria-label="Закрыть модальное окно">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

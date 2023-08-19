@@ -1,0 +1,37 @@
+// Font-family
+$font-family--norms:     'TT Norms', sans-serif;
+$font-family--norms-bold:'TT Norms Bold', sans-serif;
+
+//  Colors
+
+// System
+$color-system--white:   #FFFFFF;
+$color-system--neutral: #E4E4E7;
+$color-system--brand:   #D2EE9A;
+$color-system--error:   #EB5757;
+
+//  Text
+$color-text--primary:   #222427;
+$color-text--secondary: #5E6062;
+$color-text--accent:    #FFFFFF;
+$color-text--error:     #EB5757;
+$color-text--brand:     #8BBF1F;
+$color-text--tertiary:  #9C9D9E;
+
+//  States
+$color-state--normal:   #8BBF1F;
+$color-state--hover:    #A9D44F;
+$color-state--focus:    #8BBF1F66;
+$color-state--active:   #70A109;
+
+// Icons
+$color-icon--primary:   #222427;
+$color-icon--secondary: #5A5C5F;
+$color-icon--tertiary:  #AFB0B2;
+$color-icon--accent:    #FFFFFF;
+
+// Viewports
+$min-width:             320px;
+$desktop-width--medium: 1440px;
+$desktop-width--large:  1920px;
+$max-width:             2560px;

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Браво-22 Snow Melinga / Magic Fog",
+    "type": "Межкомнатная дверь",
+    "code": "127456",
+    "price": "180 600",
+    "discount": "170 000",
+    "photo": "snow_melinga",
+    "stock": true
+  },
+  {
+    "name": "Браво-22 Snow Melinga / Magic Fog",
+    "type": "Межкомнатная дверь",
+    "code": "123456",
+    "price": "180 600",
+    "discount": "170 000",
+    "photo": "snow_melinga",
+    "stock": false
+  },
+  {
+    "name": "Браво-22 Snow Melinga / Magic Fog",
+    "type": "Межкомнатная дверь",
+    "code": "252525",
+    "price": "180 600",
+    "discount": "100 000",
+    "photo": "snow_melinga",
+    "stock": true
+  },
+  {
+    "name": "Браво-22 Snow Melinga / Magic Fog",
+    "type": "Межкомнатная дверь",
+    "code": "555555",
+    "price": "180 600",
+    "discount": "170 000",
+    "photo": "snow_melinga",
+    "stock": false
+  },
+  {
+    "name": "Браво-22 Snow Melinga / Magic Fog",
+    "type": "Межкомнатная дверь",
+    "code": "888888",
+    "price": "180 600",
+    "discount": "100 000",
+    "photo": "snow_melinga",
+    "stock": true
+  }
+]

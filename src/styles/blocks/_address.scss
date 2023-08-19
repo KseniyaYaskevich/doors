@@ -1,0 +1,13 @@
+.address {
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.address__icon {
+  stroke: $color-icon--primary;
+}
+
+.address__text {
+  font-size: 1rem;
+}

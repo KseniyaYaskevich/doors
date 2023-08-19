@@ -1,0 +1,27 @@
+.logo {
+  @include media-desktop--medium {
+    display: flex;
+    align-items: center;
+    gap: 1.813rem;
+
+    padding: 1rem 1.5rem 1rem 3.125rem;
+  }
+}
+
+.logo__img {
+  max-width: 90px;
+
+  @include media-desktop--medium {
+    max-width: 120px;
+  }
+}
+
+.logo__desc {
+  display: none;
+
+  @include media-desktop--large {
+    display: block;
+
+    font-size: 0.813rem;
+  }
+}

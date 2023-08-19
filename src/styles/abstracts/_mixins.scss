@@ -1,0 +1,20 @@
+@mixin reset-btn {
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+@mixin media-desktop--medium {
+  @media (min-width: $desktop-width--medium) {
+    @content;
+  }
+}
+
+@mixin media-desktop--large {
+  @media (min-width: $desktop-width--large) {
+    @content;
+  }
+}
