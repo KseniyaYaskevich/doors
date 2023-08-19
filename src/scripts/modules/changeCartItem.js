@@ -1,3 +1,4 @@
+import { getData, setData } from "./storage";
 import { sumPrices } from "./sumPrices";
 
 export const changeCartItem = () => {
@@ -16,7 +17,19 @@ export const changeCartItem = () => {
         const total = ((currentPrice - basePrice) + '').replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 
         if (count.textContent <= 1) {
+          const id = item.getAttribute('data-id');
+          const cartData = getData('cart');
+
           item.remove();
+
+          for (let i = 0; i < cartData.length; i++) {
+            if (cartData[i].id === id) {
+              cartData.splice(i, 1);
+              setData('cart', cartData);
+
+              break;
+            }
+          }
         } else {
           count.textContent = +count.textContent - 1;
           price.textContent = `${total} ₽`;

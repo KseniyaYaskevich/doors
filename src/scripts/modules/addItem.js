@@ -1,5 +1,6 @@
 import { renderCartItems } from "./renderCartItems";
 import { sumPrices } from "./sumPrices";
+import { setData, getData } from './storage';
 
 export const addItem = () => {
   const cardContainer = document.querySelector('.cards__list');
@@ -11,16 +12,18 @@ export const addItem = () => {
       const id = card.getAttribute('data-id');
       const items = document.querySelectorAll('.cart__item');
 
+      const dataArray = getData('cart');
       let isMatch = false;
       counter.textContent = +counter.textContent + 1;
 
-      items.forEach(item => {
-        if (id === item.getAttribute('data-id')) {
+      for (let i = 0; i < dataArray.length; i++) {
+        if (dataArray[i].id === id) {
           isMatch = true;
+          break;
         } else {
           isMatch = false;
         }
-      });
+      }
 
       if (!isMatch) {
         const data = {
@@ -30,6 +33,9 @@ export const addItem = () => {
           price: card.querySelector('.card__discount').firstChild.textContent,
           id: card.getAttribute('data-id'),
         };
+
+        dataArray.push(data);
+        setData('cart', dataArray);
 
         renderCartItems(data);
       } else {
