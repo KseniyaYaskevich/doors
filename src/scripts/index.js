@@ -10,6 +10,7 @@ import { categoriesTabs } from './modules/categoriesTabs';
 import { renderCards } from './modules/renderCards';
 import { addItem } from './modules/addItem';
 import { changeCartItem } from './modules/changeCartItem';
+import { renderCartItems } from './modules/renderCartItems';
 
 menu();
 popupCall();
@@ -20,3 +21,4 @@ categoriesTabs();
 renderCards();
 addItem();
 changeCartItem();
+renderCartItems();
