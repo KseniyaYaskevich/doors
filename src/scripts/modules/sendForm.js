@@ -85,20 +85,19 @@ export const sendForm = () => {
 
       submitForm(form);
     });
-
-    form.addEventListener('input', evt => {
-      evt.preventDefault();
-
-      formElements.forEach(input => {
-        if (input.classList.contains('form__input--error')) {
-          input.classList.remove('form__input--error');
-        }
-      });
-    });
-
   } catch (error) {
     console.log(error.message);
   }
+
+  formElements.forEach(input => {
+    input.addEventListener('input', evt => {
+      evt.preventDefault();
+
+      if (input.classList.contains('form__input--error')) {
+        input.classList.remove('form__input--error');
+      }
+    });
+  });
 
   checkbox.addEventListener('click', () => {
     if (!checkbox.checked) {
