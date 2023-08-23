@@ -2,7 +2,7 @@ import { renderCartItems } from "./renderCartItems";
 import { getData, setData } from "./storage";
 
 export const changeCartItem = () => {
-  const cartList = document.querySelector('.cart__list');
+  const cartLists = document.querySelectorAll('.cart__list');
 
   const changeItem = evt => {
     const cartData = getData('cart');
@@ -39,5 +39,5 @@ export const changeCartItem = () => {
     }
   };
 
-  cartList.addEventListener('click', changeItem);
+  cartLists.forEach(item => item.addEventListener('click', changeItem));
 };

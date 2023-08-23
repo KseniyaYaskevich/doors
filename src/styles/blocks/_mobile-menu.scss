@@ -27,8 +27,6 @@
   list-style: none;
 }
 
-.mobile-menu__item {}
-
 .mobile-menu__link {
   text-decoration: none;
   font-size: 0.938rem;
@@ -78,7 +76,8 @@
 }
 
 .mobile-categories__button {
-  padding: 1.125rem 3rem;
+  display: flex;
+  padding: 1.125rem 2.5rem;
 
   &:not(:last-child) {
     border-right: 1px solid $color-system--neutral;

@@ -16,15 +16,15 @@
       <div class="header__logo logo">
         <a class="logo__link" href="index.html">
           <picture>
-            <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logo/logo-desktop.svg">
-            <img class="logo__img" src="./images/logo/logo-mobile.svg" alt="Логотип компании 'Фабрика дверей'">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-desktop.svg">
+            <img class="logo__img" src="images/logo/logo-mobile.svg" alt="Логотип компании 'Фабрика дверей'">
           </picture>
         </a>
         <span class="logo__desc caption caption--regular">Интернет-магазин дверей<br> в Нижнем
           Новгороде</span>
       </div>
       <div class="header__search search">
-        <div class="search__container">
+        <form class="search__form">
           <svg class="search__icon" width="24" height="24">
             <use xlink:href="images/sprite.svg#search"></use>
           </svg>
@@ -33,7 +33,7 @@
           <button class="button search__button" type="submit" aria-label="Начать поиск">
             <span class="search__arrow"><span></span></span>
           </button>
-        </div>
+        </form>
       </div>
       <div class="header__address address">
         <svg class="address__icon" width="24" height="24">
@@ -45,22 +45,22 @@
         <ul class="contacts__list">
           <li class="contacts__item">
             <a class="contacts__link" href="#!">
-              <img src="./images/contacts/telegram.svg" alt="telegram">
+              <img src="images/contacts/telegram.svg" alt="telegram">
             </a>
           </li>
           <li class="contacts__item">
             <a class="contacts__link" href="#!">
-              <img src="./images/contacts/whatsapp.svg" alt="whatsapp">
+              <img src="images/contacts/whatsapp.svg" alt="whatsapp">
             </a>
           </li>
           <li class="contacts__item">
             <a class="contacts__link title title--medium" href="tel:88312199781">8 (831) 219-97-81</a>
           </li>
         </ul>
-        <button class="button contacts__button text text--medium request-call">Заказать звонок</button>
+        <button class="button contacts__button text text--medium request-call" type="button">Заказать звонок</button>
       </div>
       <div class="header__catalog catalog">
-        <button class="button  catalog__button caps caps--medium">
+        <button class="button  catalog__button caps caps--medium" type="button">
           <svg class="catalog__icon" width="24" height="24">
             <use xlink:href="images/sprite.svg#catalog"></use>
           </svg>
@@ -92,7 +92,7 @@
       </nav>
       <div class="header__categories categories">
         <div class="categories-nav">
-          <button class="button categories-nav__item">
+          <button class="button categories-nav__item" type="button">
             <svg class="categories-nav__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <mask id="path-1-inside-1_125_1048" fill="white">
@@ -108,18 +108,18 @@
             </svg>
             <span class="categories-nav__counter">3</span>
           </button>
-          <button class="button categories-nav__item">
+          <button class="button categories-nav__item" type="button">
             <svg class="categories-nav__icon" width="24" height="24">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
           </button>
-          <button class="button categories-nav__item">
+          <button class="button categories-nav__item" type="button">
             <svg class="categories-nav__icon" width="24" height="24">
               <use xlink:href="images/sprite.svg#card"></use>
             </svg>
             <span class="categories-nav__counter" id="cart-counter">0</span>
           </button>
-          <button class="button categories-nav__item">
+          <button class="button categories-nav__item" type="button">
             <svg class="categories-nav__icon" width="24" height="24">
               <use xlink:href="images/sprite.svg#user"></use>
             </svg>
@@ -134,7 +134,7 @@
             <h3>Понравилось</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-          <div class="categories-content__item cart">
+          <div class="categories-content__item cart" id="cart">
             <ul class="cart__list">
               <!-- cart__items -->
             </ul>
@@ -157,8 +157,14 @@
           <div class="tabs-content__item">
             <h3>Поиск</h3>
           </div>
-          <div class="tabs-content__item">
-            <h3>Корзина</h3>
+          <div class="tabs-content__item cart">
+            <ul class="cart__list">
+              <!-- cart__items -->
+            </ul>
+            <div class="cart__result">
+              <p class="cart__sum title title--medium">Сумма заказа: 0 ₽</p>
+              <button class="button cart__button" type="button">Перейти к оформлению →</button>
+            </div>
           </div>
           <div class="tabs-content__item">
             <h3>Акции</h3>
@@ -188,51 +194,53 @@
                   <a class="mobile-menu__link caps caps--medium" href="#!">Контакты</a>
                 </li>
               </ul>
-              <button class="button mobile-menu__button text text--medium request-call">Заказать звонок</button>
+              <button class="button mobile-menu__button text text--medium request-call" type="button">Заказать
+                звонок</button>
             </div>
-            <ul class="mobile-menu__categories mobile-categories">
-              <button class="button mobile-categories__button">
-                <img src="./images/compare-menu.svg" alt="">
+            <div class="mobile-menu__categories mobile-categories">
+              <button class="button mobile-categories__button" type="button">
+                <img src="images/compare-menu.svg" alt="">
               </button>
-              <button class="button mobile-categories__button">
+              <button class="button mobile-categories__button" type="button">
                 <svg class="" width="24" height="24">
                   <use xlink:href="images/sprite.svg#heart"></use>
                 </svg>
               </button>
-              <button class="button mobile-categories__button">
+              <button class="button mobile-categories__button" type="button">
                 <svg class="" width="24" height="24">
                   <use xlink:href="images/sprite.svg#user"></use>
                 </svg>
               </button>
-            </ul>
+            </div>
           </div>
         </div>
         <div class="tabs-nav">
-          <button class="button tabs-nav__item caption caption--regular">
+          <button class="button tabs-nav__item caption caption--regular" type="button">
             <svg class="tabs-nav__icon" width="24" height="24">
               <use xlink:href="images/sprite.svg#catalog"></use>
             </svg>
             Каталог
           </button>
-          <button class="button tabs-nav__item caption caption--regular">
+          <button class="button tabs-nav__item caption caption--regular" type="button">
             <svg class="tabs-nav__icon" width="24" height="24">
               <use xlink:href="images/sprite.svg#search"></use>
             </svg>
             Поиск
           </button>
-          <button class="button tabs-nav__item caption caption--regular">
+          <button class="button tabs-nav__item caption caption--regular" type="button">
             <svg class="tabs-nav__icon" width="24" height="24">
               <use xlink:href="images/sprite.svg#card"></use>
             </svg>
             Корзина
+            <span class="tabs-nav__counter" id="cart-counter">0</span>
           </button>
-          <button class="button tabs-nav__item caption caption--regular">
+          <button class="button tabs-nav__item caption caption--regular" type="button">
             <svg class="tabs-nav__icon" width="24" height="24">
               <use xlink:href="images/sprite.svg#sale"></use>
             </svg>
             Акции
           </button>
-          <button class="button tabs-nav__item caption caption--regular">
+          <button class="button tabs-nav__item caption caption--regular" type="button">
             <span class="tabs-nav__custom-icon">
               <span></span>
             </span>

@@ -17,11 +17,11 @@ export const renderCards = () => {
             <div class="card__header">
                 <p class="card__hit">Хит продаж</p>
                 <div>
-                    <button class="button"><img src="./images/compare.svg" alt=""></button>
-                    <button class="button"><img src="./images/heart.svg" alt=""></button>
+                    <button class="button"><img src="images/compare.svg" alt=""></button>
+                    <button class="button"><img src="images/heart.svg" alt=""></button>
                 </div>
             </div>
-            <img class="card__img" src="./images/${data.photo}.jpg" alt="${data.type} ${data.name}">
+            <img class="card__img" src="images/${data.photo}.jpg" alt="${data.type} ${data.name}">
             <div class="card__body">
                 <p class="card__stock text text--medium">${data.stock ? 'В наличии' : 'Нет в наличии'}
                     <span class="card__code">Арт.: ${data.code}</span>
